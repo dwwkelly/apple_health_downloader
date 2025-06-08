@@ -1,5 +1,7 @@
 import Foundation
+#if canImport(FoundationNetworking)
 import FoundationNetworking
+#endif
 
 func download(from urlString: String, to destination: URL) throws {
     guard let url = URL(string: urlString) else {
